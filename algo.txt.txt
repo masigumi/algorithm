@@ -1,0 +1,12 @@
+priority queue
+
+struct cmp {
+    bool operator()(int a, int b) {
+        if(abs(a)==abs(b))
+            return a > b;
+        else
+            return abs(a) > abs(b);
+    }
+};
+
+priority_queue<int, vector<int>, cmp> pq;
